@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import Branch from "./components/Branch.jsx";
 import Signal from "./components/Signal.jsx";
-import Mission from "./components/Mission.jsx";
+import Aim_and_mission from "./components/Aim_and_mission.jsx";
 import Events from "./components/Events.jsx";
 import TeamSection from "./components/TeamSection.jsx";
 import Cta from "./components/Cta.jsx";
@@ -17,7 +17,7 @@ export default function App() {
         <Hero />
         <Branch />
         <Signal />
-        <Mission />
+        <Aim_and_mission />
         <Events />
         <TeamSection />
         <Cta />

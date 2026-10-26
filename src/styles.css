@@ -135,24 +135,6 @@ a { color: inherit; }
 .scope__count { position: absolute; right: 22px; top: 14px; text-align: right; font: 700 clamp(44px, 8vw, 84px)/1 var(--display); color: #2bffb0; }
 .scope__count small { display: block; font: 10px var(--mono); letter-spacing: 1px; color: #7bdcb8; }
 
-/* ───────── mission ───────── */
-.mission { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-.mcard { position: relative; padding: 22px 18px 24px; background: var(--paper); border: 3px solid var(--ink); border-top-width: 10px; border-radius: 16px; box-shadow: 5px 6px 0 var(--ink); }
-.mcard--yellow { border-top-color: var(--yellow); }
-.mcard--pink { border-top-color: var(--pink); }
-.mcard--teal { border-top-color: var(--teal); }
-.mcard--purple { border-top-color: var(--purple); }
-.mcard:nth-child(2) { transform: translateY(10px) rotate(.5deg); }
-.mcard:nth-child(3) { transform: translateY(-4px) rotate(-.4deg); }
-.mcard:nth-child(4) { transform: translateY(8px); }
-.mcard__no { font-size: 10px; opacity: .6; }
-.mcard h3 { font: 700 18px var(--display); margin: 6px 0 10px; }
-.mcard__bar { display: block; width: 46px; height: 12px; background: var(--yellow); border: 2px solid var(--ink); border-radius: 99px; margin-bottom: 12px; }
-.mcard--pink .mcard__bar { background: var(--pink); }
-.mcard--teal .mcard__bar { background: var(--teal); }
-.mcard--purple .mcard__bar { background: var(--purple); }
-.mcard p { font-size: 11.5px; margin: 0; }
-
 /* ───────── events / IDE ───────── */
 .ide { background: #fff; border: 3px solid var(--ink); border-radius: 16px; box-shadow: 8px 9px 0 var(--ink); overflow: hidden; }
 .ide__bar { display: flex; align-items: center; gap: 14px; padding: 9px 14px; background: #e9e6f7; border-bottom: 3px solid var(--ink); font-size: 11px; }

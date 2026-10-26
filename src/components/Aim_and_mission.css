@@ -1,0 +1,523 @@
+:root {
+  --mission-bg: #e9faf3;
+  --mission-navy: #211d3e;
+  --mission-yellow: #ffd33f;
+  --mission-pink: #ff6288;
+  --mission-teal: #11b8a5;
+  --mission-purple: #9862ff;
+  --mission-white: #ffffff;
+  --mission-muted: #88859b;
+  --mission-off: #d5d9d6;
+}
+
+.mission-section {
+  width: 100%;
+  min-height: 603px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 65px 32px;
+  background: var(--mission-bg);
+  color: var(--mission-navy);
+  font-family: "Inter", sans-serif;
+  line-height: normal;
+}
+
+.mission-section *,
+.mission-section *::before,
+.mission-section *::after {
+  box-sizing: border-box;
+}
+
+.mission-section .mission-container {
+  width: 100%;
+  max-width: 1120px; 
+  margin-left: 0;
+  margin-right: auto;
+  min-width: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mission-section .section-header {
+  position: relative;
+  margin: 0 0 44px;
+}
+
+.mission-section .eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: #4c80ff;
+  margin: 0 0 11px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.mission-section .section-title {
+  font-family: "Fredoka", sans-serif;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -1.4px;
+  color: var(--mission-navy);
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+}
+
+.mission-section .header-indicator {
+  position: absolute;
+  right: 240px;
+  top: 36px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--mission-yellow);
+  border: 2px solid var(--mission-navy);
+  box-shadow: 0 0 0 4px #ffffff80;
+}
+
+.mission-section .gates-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  min-width: 0;
+  align-items: stretch;
+}
+
+.mission-section .gate-card {
+  --accent: var(--mission-yellow);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 390px; 
+  height: 390px;
+  padding: 24px 22px 20px;
+
+  background: var(--mission-white);
+  color: var(--mission-navy);
+
+  border: 2px solid var(--mission-navy);
+  border-top: 7px solid var(--accent);
+  border-radius: 15px;
+
+  box-shadow: 6px 7px 0 var(--mission-navy);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.mission-section .gate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 9px 0 var(--mission-navy);
+}
+
+.mission-section .gate-card.accent-yellow {
+  --accent: var(--mission-yellow);
+}
+
+.mission-section .gate-card.accent-pink {
+  --accent: var(--mission-pink);
+}
+
+.mission-section .gate-card.accent-teal {
+  --accent: var(--mission-teal);
+}
+
+.mission-section .gate-card.accent-purple {
+  --accent: var(--mission-purple);
+}
+
+.mission-section .gate-card-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.mission-section .gate-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--mission-navy);
+
+  margin: 0 0 20px;
+  padding: 0;
+
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.mission-section .gate-icon {
+  display: block;
+  flex-shrink: 0;
+  overflow: visible;
+
+  width: 54px;
+  height: 39px;
+
+  margin: 0 0 13px 5px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.mission-section .gate-icon path,
+.mission-section .gate-icon circle,
+.mission-section .gate-icon line {
+  stroke: var(--mission-navy);
+  stroke-width: 2.3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.mission-section .gate-icon .gate-fill {
+  fill: #e5eaff;
+}
+
+.mission-section .gate-heading {
+  font-family: "Fredoka", sans-serif;
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--mission-navy);
+
+  margin: 0 0 14px;
+  padding: 0;
+
+  white-space: nowrap;
+  max-width: none;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+}
+
+.mission-section .power-switch {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  position: relative;
+  flex-shrink: 0;
+
+  width: 100%;
+  height: 25px;
+
+  padding: 3px 6px;
+  margin: 0;
+
+  background: var(--mission-yellow);
+  border: 2px solid var(--mission-navy);
+  border-radius: 20px;
+
+  box-shadow: 2px 2px 0 var(--mission-navy);
+
+  color: var(--mission-navy);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 6px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: background 180ms ease;
+}
+
+.mission-section .power-switch[aria-checked="false"] {
+  background: var(--mission-off);
+}
+
+.mission-section .power-switch:focus-visible {
+  outline: 3px solid #4c80ff;
+  outline-offset: 3px;
+}
+
+.mission-section .switch-knob {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 13px;
+
+  padding: 0 2px;
+
+  background: #9ea8a2;
+  border: 1.8px solid var(--mission-navy);
+  border-radius: 12px;
+}
+
+.mission-section .switch-knob::after {
+  content: "";
+
+  position: absolute;
+  left: 1.5px;
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  background: #ffffff;
+  border: 1px solid var(--mission-navy);
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+  transition: left 180ms ease;
+}
+
+.mission-section .power-switch[aria-checked="true"]
+.switch-knob::after {
+  left: 19px;
+}
+
+.mission-section .power-switch[aria-checked="false"]
+.switch-knob::after {
+  left: 1px;
+}
+
+.mission-section .switch-state {
+  display: inline-block;
+
+  margin: 0 0 0 7px;
+  padding: 0;
+
+  color: var(--mission-navy);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 6px;
+  line-height: 1;
+  letter-spacing: 0.2px;
+}
+
+.mission-section .gate-description {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: #34314f;
+
+  margin: 12px 0 0;
+  padding: 0;
+
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.mission-section .gate-card-content.is-off .gate-description {
+  font-family: "Arial", sans-serif;
+  font-size: 11px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--mission-muted);
+
+  margin-top: 20px;
+  letter-spacing: 0;
+}
+
+.mission-section .card-indicator {
+  position: absolute;
+  right: 17px;
+  bottom: 13px;
+
+  width: 12px;
+  height: 12px;
+
+  border: 2px solid var(--mission-navy);
+  border-radius: 50%;
+
+  background: var(--mission-yellow);
+  box-shadow: 0 0 0 3px #fff7e0;
+}
+
+.mission-section .gate-card-content.is-off .card-indicator {
+  background: var(--mission-off);
+  border-color: #9999a8;
+  box-shadow: none;
+}
+
+@media (max-width: 850px) {
+  .mission-section {
+    min-height: 100vh;
+    padding: 48px 24px;
+  }
+
+  .mission-section .mission-container {
+    max-width: 600px;
+  }
+
+  .mission-section .section-title {
+    font-size: 44px;
+  }
+
+  .mission-section .header-indicator {
+    right: 15px;
+  }
+
+  .mission-section .gates-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .mission-section .gate-card {
+    height: 329px;
+    min-height: 329px;
+  }
+}
+
+@media (max-width: 520px) {
+  .mission-section {
+    min-height: 100vh;
+    align-items: flex-start;
+    padding: 10px 18px 24px;
+  }
+
+  .mission-section .mission-container {
+    width: 100%;
+    max-width: 315px;
+    margin: 0 auto;
+  }
+
+  .mission-section .section-header {
+    margin-bottom: 25px;
+  }
+
+  .mission-section .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+    margin-bottom: 11px;
+  }
+
+  .mission-section .section-title {
+    font-size: 35px;
+    line-height: 1.08;
+    letter-spacing: -0.8px;
+  }
+
+  .mission-section .header-indicator {
+    display: none;
+  }
+
+  .mission-section .gates-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .mission-section .gate-card {
+    width: 100%;
+    height: 438px;
+    min-height: 438px;
+
+    padding: 25px 28px 20px;
+
+    border-width: 3px;
+    border-top-width: 10px;
+    border-radius: 17px;
+
+    box-shadow: 8px 9px 0 var(--mission-navy);
+  }
+
+  .mission-section .gate-card:hover {
+    transform: none;
+    box-shadow: 8px 9px 0 var(--mission-navy);
+  }
+
+  .mission-section .gate-label {
+    font-size: 9px;
+    margin-bottom: 29px;
+    letter-spacing: 1px;
+  }
+
+  .mission-section .gate-icon {
+    width: 70px;
+    height: 47px;
+    margin: 0 0 16px 8px;
+  }
+
+  .mission-section .gate-heading {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 19px;
+  }
+
+  .mission-section .power-switch {
+    height: 35px;
+    padding: 4px 9px;
+    border-width: 2px;
+    box-shadow: 2px 2px 0 var(--mission-navy);
+  }
+
+  .mission-section .switch-knob {
+    width: 33px;
+    height: 20px;
+    padding: 0 3px;
+  }
+
+  .mission-section .switch-knob::after {
+    width: 10px;
+    height: 10px;
+    left: 2px;
+  }
+
+  .mission-section .power-switch[aria-checked="true"]
+  .switch-knob::after {
+    left: 17px;
+  }
+
+  .mission-section .power-switch[aria-checked="false"]
+  .switch-knob::after {
+    left: 2px;
+  }
+
+  .mission-section .switch-state {
+    font-size: 8px;
+    margin-left: 9px;
+  }
+
+  .mission-section .gate-description {
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 19px;
+  }
+
+  .mission-section .gate-card-content.is-off .gate-description {
+    font-size: 11px;
+    line-height: 1.8;
+    margin-top: 27px;
+  }
+
+  .mission-section .card-indicator {
+    width: 15px;
+    height: 15px;
+    right: 21px;
+    bottom: 20px;
+    border-width: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-section,
+  .mission-section *,
+  .mission-section *::before,
+  .mission-section *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
